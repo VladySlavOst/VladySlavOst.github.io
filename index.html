@@ -100,7 +100,7 @@
 				<div class="row">
 					<div class="col-md-3 photo_face">
 						<div class="my_photo">
-							<img src="img/myphoto.png" alt="" class="img-responsive wow bounceOut" data-wow-duration="3s">
+							<img src="img/myphoto.png" alt="" class="img-responsive wow tada" data-wow-duration="3s">
 							<h3>Vlad Ostapenko</h3>
 							<button class="resume">
 								<a href="">Download CV</a>
@@ -109,8 +109,8 @@
 					</div>
 					<div class="col-md-5 about_content">
 						<div class="about_text">
-							<h2>Who I am and what I do</h2>
-							<p>No one lights a lamp in order to hide it behinde the door: the purpose of light is to create more light, to open people's eyes, to reveal marvels around.I enjoy turning complex problems into simple, beautiful and intuitive interface designs. When I'm not coding or pushing pixels, you'll find me in the gym or on the court shooting hoops.</p>
+							<h2>Something about me</h2>
+							<p>I'm from Kharkov. Finished Peoples's Ukrainian Academy, faculty "translator", have bachelor degree. Found of creating, that's why I walk this way. In my portfolio, are a few of the websites that I’ve developed. I believe, that my strong points are my Creativeness and Punctuality. My #1 goal will always be to meet your needs and deadline. When I'm working on a new project, I like to speak with the client, so that I can have a clear understanding of his/her needs and vision of the project.</p>
 							<h3 class="name-dev">
 								Some more facts about Dev. from Kharkov
 							</h3>
@@ -181,7 +181,7 @@
 			</p>
 		</div>
 		<div class="container-fluid">
-			<div class="col-md-3 col-sm-12 col-xs-12 skill-html wow fadeInLeftBig" data-wow-duration="3s">
+			<div class="col-md-3 col-sm-12 col-xs-12 skill-html wow zoomInDown" data-wow-duration="3s">
 				<div class="skill">
 					<div class="skill_logo">
 						<i class="fa fa-html5" aria-hidden="true"></i>
@@ -197,7 +197,7 @@
 
 			</div>
 
-			<div class="col-md-3 col-sm-12 col-xs-12 skill-bootstrap wow fadeInLeftBig" data-wow-duration="2s">
+			<div class="col-md-3 col-sm-12 col-xs-12 skill-bootstrap wow zoomInDown" data-wow-duration="2s">
 				<div class="skill">
 					<div class="skill_logo">
 						<img src="img/B.png" alt="">
@@ -210,7 +210,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-3 col-sm-12 col-xs-12 skill-seo wow fadeInRightBig" data-wow-duration="2s">
+			<div class="col-md-3 col-sm-12 col-xs-12 skill-seo wow zoomInDown" data-wow-duration="2s">
 				<div class="skill">
 					<div class="skill_logo">
 						<i class="fa fa-internet-explorer" aria-hidden="true"></i>
@@ -223,7 +223,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-3 col-sm-12 col-xs-12 skill-js wow fadeInRightBig" data-wow-duration="3s">
+			<div class="col-md-3 col-sm-12 col-xs-12 skill-js wow zoomInDown" data-wow-duration="3s">
 				<div class="skill">
 					<div class="skill_logo">
 						<i class="fa fa-lightbulb-o" aria-hidden="true"></i>
@@ -249,9 +249,9 @@
 			<div class="quotes_text">
 				<p>“Have the courage to follow your heart and intuition. They somehow already know what truly want to become. Everything else is secondary.”</p>
 			</div>
-			<div id="progressBar">
+			<!-- <div id="progressBar">
 				<div id="bar"></div>
-			</div>
+			</div> -->
 			<hr>
 			<div class="quotes_author">
 				<p>Stiv Jobs</p>
@@ -264,6 +264,15 @@
 			<hr>
 			<div class="quotes_author">
 				<p>Bill Gates</p>
+			</div>
+		</div>
+		<div class="quotes">
+			<div class="quotes_text">
+				<p>“I am I. And I won't subordinate my taste to the unanimous judgment of mankind.”</p>
+			</div>
+			<hr>
+			<div class="quotes_author">
+				<p>Jack London</p>
 			</div>
 		</div>
 		<div class="quotes">
@@ -516,7 +525,7 @@ Find me on the map <i class="fa fa-map-signs" aria-hidden="true"></i></a>
 <!-- Соц сети начало -->
 <section class="networks">
 	<div class="soc_icons">
-		<ul class="wow bounceInDown" data-wow-duration="3s">
+		<ul class="wow bounceInDown" data-wow-duration="2s">
 			<li><a href="https://www.facebook.com/v.vost"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 			<li><a href="https://vk.com/id112388124"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
 			<li><a href="https://www.instagram.com/vlad_ost/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
@@ -540,13 +549,32 @@ Find me on the map <i class="fa fa-map-signs" aria-hidden="true"></i></a>
 
 <script src="js/jquery-3.0.0.min.js"></script>
 <script src="js/scrollup.js"></script>
-<script async src="script.js"></script>
 <script src="js/jquery.magnific-popup.min.js"></script>
 <script src="js/jquery.nicescroll.min.js"></script>
 <script src="js/jquery.mixitup.min.js"></script>
 <script src="js/owl.carousel.js"></script>
 <script src="js/wow.min.js"></script>
 <script async>
+
+$(document).ready(function(){
+	new WOW().init();
+	
+	$("#scrollup, #menu, #but_scroll, #logo, #menu_2").on("click","a", function (event) {
+		//отменяем стандартную обработку нажатия по ссылке
+		event.preventDefault();
+
+		//забираем идентификатор бока с атрибута href
+		var id  = $(this).attr('href'),
+
+		//узнаем высоту от начала страницы до блока на который ссылается якорь
+			top = $(id).offset().top;
+		
+		//анимируем переход на расстояние - top за 1500 мс
+		$('body,html').animate({scrollTop: top}, 1500);
+	});
+});
+</script>
+<!-- <script async>
 	new WOW().init();
 
 	$(document).ready(function(){ 
@@ -561,10 +589,11 @@ Find me on the map <i class="fa fa-map-signs" aria-hidden="true"></i></a>
 
 
 	});
-</script>
-<script async type="text/javascript">
-	$(document).ready(function(){
-    $("#form_to_send").submit(function() { //устанавливаем событие отправки для формы с id=form
+</script> -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $("#form").submit(function() { //устанавливаем событие отправки для формы с id=form
             var form_data = $(this).serialize(); //собераем все данные из формы
             $.ajax({
             type: "POST", //Метод отправки
@@ -572,7 +601,7 @@ Find me on the map <i class="fa fa-map-signs" aria-hidden="true"></i></a>
             data: form_data,
             success: function() {
                    //код в этом блоке выполняется при успешной отправке сообщения
-                   alert("Thanks!");
+                   alert("Ваше сообщение отпрвлено!");
             });
     });
 });    
