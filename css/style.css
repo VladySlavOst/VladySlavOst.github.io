@@ -85,11 +85,11 @@ button::-moz-focus-inner {
 
 header {
     background-image: url(../img/bgf2.png);
-    -webkit-background-size: cover;
-    background-size: cover;
+    -webkit-background-size: 100vw;
+    background-size: 100vw;
     height: 100vh;
     background-repeat: no-repeat;
-    background-repeat: center no-repeat;
+    /*background-repeat: center no-repeat;*/
     text-align: center;
     background-attachment: fixed;
     background-origin: initial;
