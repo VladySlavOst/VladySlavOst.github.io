@@ -450,8 +450,8 @@ nav {
 .block_quotes {
     max-width: 100%;
     background-image: url(../img/bgfquot.png);
-    -webkit-background-size: cover;
-    background-size: cover;
+    -webkit-background-size: 100vw;
+    background-size: 100vw;
     background-repeat: no-repeat;
     text-align: center;
     margin-top: 78px;
