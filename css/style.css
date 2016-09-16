@@ -107,7 +107,6 @@ only screen and (min-resolution: 144dpi)  {
         background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    position: relative;
    }
 }
 
