@@ -88,8 +88,8 @@ header {
     -webkit-background-size: cover;
     background-size: cover;
     height: 100vh;
-    background-repeat: no-repeat;
-    /*background-repeat: center no-repeat;*/
+    /*background-repeat: no-repeat;*/
+    background-repeat: center no-repeat;
     text-align: center;
     background-attachment: fixed;
     background-origin: initial;
@@ -97,13 +97,15 @@ header {
     background-position: 100% 0;
     position: relative;
 }
-@media     only screen and (-webkit-min-device-pixel-ratio: 1.5),
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
 only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
 only screen and (min-resolution: 1.5dppx),
 only screen and (min-resolution: 144dpi)  {
    header  {
       background: url(../img/bgf2@2x.png);
+        background-size: cover;
+    background-repeat: no-repeat;
    }
 }
 
