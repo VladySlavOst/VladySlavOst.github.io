@@ -473,6 +473,17 @@ nav {
     background-position: 100% 0;
     position: relative;
 }
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-resolution: 1.5dppx),
+only screen and (min-resolution: 144dpi)  {
+   .block_quotes  {
+      background: url(../img/bgfquot@2x.png);
+        background-size: cover;
+    background-repeat: no-repeat;
+   }
+}
 
 .quotes_text p {
     padding-top: 48px;
