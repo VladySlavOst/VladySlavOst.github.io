@@ -84,7 +84,7 @@ button::-moz-focus-inner {
 }
 
 header {
-    background-image: url(../img/bgf2.png);
+    background-image: url(../img/tumblr1.png);
     -webkit-background-size: cover;
     background-size: cover;
     height: 100vh;
@@ -97,14 +97,15 @@ header {
     background-position: 100% 0;
     position: relative;
 }
-/*@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
-only screen and (-moz-min-device-pixel-ratio: 1.5),
+@media     only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
-only screen and (min-device-pixel-ratio: 1.5) {
-  header {
-    background: url(../img/bgf2.png.png);
-  }
-}*/
+only screen and (min-resolution: 1.5dppx),
+only screen and (min-resolution: 144dpi)  {
+   .image  {
+      background: url(../img/bgf2@2x.png);
+   }
+}
 
 header::before {
     content: "";
