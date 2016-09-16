@@ -109,7 +109,7 @@ only screen and (min-resolution: 144dpi)  {
     background-attachment: fixed;
     background-origin: initial;
     background-clip: initial;
-    background-position: 100% 0;
+   /* background-position: 100% 0;*/
     position: relative;
    }
 }
