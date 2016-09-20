@@ -106,6 +106,7 @@ only screen and (min-resolution: 144dpi)  {
       background: url(../img/bgf2@2x.png);
         background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
    }
 }
 
